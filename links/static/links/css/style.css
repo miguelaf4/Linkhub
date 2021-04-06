@@ -1,0 +1,162 @@
+*,html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Structure */
+
+body {
+    background-color: rgb(204, 204, 204);
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.container {
+    background-color: #F5F5F5;
+    height: 100%;
+    max-width: 600px;
+    width: 100%;
+    /* justify-content: center;
+    flex-direction: column; */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Profile Header */
+
+.profile-container {
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: linear-gradient(180deg, #E8E8E8 34.48%, rgba(232, 232, 232, 0.104167) 120.01%, rgba(232, 232, 232, 0) 129.96%);
+}
+
+    @media only screen and (max-width: 600px) {
+        .profile-container {
+            margin-top: 25%;
+        } 
+    }
+
+.profile-img-wrapper {
+    height: 200px;
+    width: 200px;
+    border-radius: 180px;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -100px;
+    position: relative;
+    align-self: center;
+}
+
+.profile-img {
+    height: 180px;
+    width: 180px;
+    border: solid 10px  #20eb6a;
+    border-radius: 360px;
+}
+
+.profile-name {
+    font-weight: bold;
+    font-size: 28px;
+    color: #151515;
+    text-align: center;
+}
+
+.profile-title {
+    font-weight: 300;
+    font-size: 18px;
+    color: #464646;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.profile-text {
+    top: -80px;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.profile-location {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    color: #7B7B7B;
+}
+
+.muted {
+    font-size: 14px;
+}
+
+.icon-location {
+    fill: #7B7B7B;
+}
+
+/* Link Card */
+
+.link-container {
+    display: flex;
+    justify-content: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding:0.5rem 0 1rem;
+    height: 400px;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.link-card {
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    background-color: #E8E8E8;
+    width: 90%;
+    height: 80px;
+}
+
+.link-card img {
+    margin-left:1rem;
+    margin-right: 1rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.link-card h2{
+    font-weight: 400;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: sticky;
+    width: auto;
+    height: 80px;
+    background: linear-gradient(180deg, #E8E8E8 0%, rgba(232, 232, 232, 0) 100%);
+}
+
+footer p{
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    color: #8E8E8E;
+}

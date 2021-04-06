@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'links/css/style.css' %}">
+    
+</head>
+<body>
+    <div class="container">
+
+        <div class="profile-container">
+            <div class="profile-img-wrapper">
+                <img src="{% static 'links/img/BomboPP.png' %}" alt="Yo" class="profile-img">
+            </div>
+            <div class="profile-text">
+                <h1 class="profile-name">Miguel Arrañaga Fernández</h1>
+                <h2 class="profile-title">Web Developer</h2>
+                <div class="profile-location">
+                    <svg class="icon-location"xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <p class="muted">Mérida, Yucatán</p>
+                </div>
+            </div>
+        </div>
+        <div class="link-container">
+            {% for link in links %}
+            <!-- <a href="{{link.link}}"> -->
+                <a href="{{link.link}}" class="link-card">
+                    <img src="{{link.image.url}}" alt="{{link.title}}">
+                    <h2 class="link-text">{{link.title}}</h2>
+                </a>
+            <!-- </a> -->
+            {% endfor %}
+        </div>
+    <footer>
+        <p>Powered by Miguel Arrañaga</p>
+        <a href="mailto:miguelarraf@gmail.com"><p>Contactar</p></a>
+    </footer>
+</body>
+</html>
